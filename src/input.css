@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Gamja+Flower&family=Mandali&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.navbar {
+    @apply text-white relative h-14 flex justify-between items-center
+}
+
+body {
+    @apply text-whiteColor bg-primaryColor tracking-wider font-nunito;
+}
+
+.ul-list {
+    @apply flex flex-col text-center gap-5 justify-center items-center capitalize;
+}
+
+.header .nav-link {
+    @apply hover:text-secondaryColor;
+}
