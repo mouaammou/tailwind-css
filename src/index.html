@@ -32,7 +32,7 @@
                 <a href="#" class="text-4xl uppercase">Bur<span class="text-secondaryColor">ger</span></a>
            </div>
 
-           <div class="absolute top-0 left-0 w-full py-14 bg-primaryColor border-b border-secondaryColor">
+           <div class="dropdown-menu hidden md:block" id="dropdown-menu">
                 <ul class="ul-list">
                     <li>
                         <a class="nav-link" href="#home">home</a>
@@ -51,14 +51,14 @@
                     </li>
                 </ul>
 
-                <div>
-                    <i class="ri-close-line"></i>
+                <div class="close" >
+                    <i class="ri-close-line md:hidden" id="close-icon"></i>
                 </div>
            </div>
 
-           <div>
-                <i class="ri-moon-line"></i>
-                <i class="ri-menu-2-line"></i>
+           <div class="icons-left">
+                <i class="ri-moon-line md:mx-6" id="dark-mode"></i>
+                <i class="ri-menu-2-line md:hidden" id="nav-menu"></i>
            </div>
         </nav>
     </header>
@@ -90,6 +90,6 @@
   <!--~~~~~~~~~~~~~~~ Scroll Reveal ~~~~~~~~~~~~~~~-->
 
   <!--~~~~~~~~~~~~~~~ Main.js ~~~~~~~~~~~~~~~-->
-
+    <script src="js/main.js"></script>
   </body>
 </html>

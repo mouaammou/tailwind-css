@@ -556,63 +556,6 @@ video {
   --tw-contain-style:  ;
 }
 
-.absolute{
-  position: absolute;
-}
-
-.left-0{
-  left: 0px;
-}
-
-.top-0{
-  top: 0px;
-}
-
-.w-full{
-  width: 100%;
-}
-
-.border-b{
-  border-bottom-width: 1px;
-}
-
-.border-secondaryColor{
-  --tw-border-opacity: 1;
-  border-color: rgb(255 204 0 / var(--tw-border-opacity));
-}
-
-.bg-primaryColor{
-  --tw-bg-opacity: 1;
-  background-color: rgb(1 10 94 / var(--tw-bg-opacity));
-}
-
-.p-\[3rem\]{
-  padding: 3rem;
-}
-
-.py-14{
-  padding-top: 3.5rem;
-  padding-bottom: 3.5rem;
-}
-
-.font-oswald{
-  font-family: Oswald, sans-serif;
-}
-
-.text-4xl{
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.uppercase{
-  text-transform: uppercase;
-}
-
-.text-secondaryColor{
-  --tw-text-opacity: 1;
-  color: rgb(255 204 0 / var(--tw-text-opacity));
-}
-
 .navbar{
   position: relative;
   display: flex;
@@ -639,10 +582,131 @@ body{
   justify-content: center;
   gap: 1.25rem;
   text-align: center;
+  font-size: 1rem;
   text-transform: capitalize;
+}
+
+@media (min-width: 768px){
+  .ul-list{
+    flex-direction: row;
+  }
+}
+
+.header .nav-link{
+  transition-duration: 200ms;
+  transition-timing-function: linear;
 }
 
 .header .nav-link:hover{
   --tw-text-opacity: 1;
   color: rgb(255 204 0 / var(--tw-text-opacity));
+}
+
+.close{
+  position: absolute;
+  top: 0.7rem;
+  right: 1rem;
+  cursor: pointer;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  transition-duration: 200ms;
+  transition-timing-function: linear;
+}
+
+.close:hover{
+  --tw-text-opacity: 1;
+  color: rgb(255 204 0 / var(--tw-text-opacity));
+}
+
+.icons-left{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.icons-left i{
+  cursor: pointer;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  transition-duration: 200ms;
+  transition-timing-function: linear;
+}
+
+.icons-left i:hover{
+  --tw-text-opacity: 1;
+  color: rgb(255 204 0 / var(--tw-text-opacity));
+}
+
+.dropdown-menu{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 204 0 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(1 10 94 / var(--tw-bg-opacity));
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+@media (min-width: 768px){
+  .dropdown-menu{
+    position: static;
+    margin-left: auto;
+    display: block;
+    width: auto;
+    border-style: none;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+.hidden{
+  display: none;
+}
+
+.p-\[3rem\]{
+  padding: 3rem;
+}
+
+.font-oswald{
+  font-family: Oswald, sans-serif;
+}
+
+.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+.text-secondaryColor{
+  --tw-text-opacity: 1;
+  color: rgb(255 204 0 / var(--tw-text-opacity));
+}
+
+/* what is the deffrence between @layer : 
+    answer : using @layer will make the css file more organized and readable, instead of writing all the css code in one place, we can separate the code into different layers, for example, we can put the base code in one layer, the components in another layer, and the utilities in another layer, this will make the code more organized and readable.
+*/
+
+@media (min-width: 768px){
+  .md\:mx-6{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .md\:block{
+    display: block;
+  }
+
+  .md\:hidden{
+    display: none;
+  }
 }

@@ -4,20 +4,44 @@
 @tailwind components;
 @tailwind utilities;
 
+/* what is the deffrence between @layer : 
+    answer : using @layer will make the css file more organized and readable, instead of writing all the css code in one place, we can separate the code into different layers, for example, we can put the base code in one layer, the components in another layer, and the utilities in another layer, this will make the code more organized and readable.
+*/
 
+@layer components
+{
+    .navbar {
+        @apply text-white relative h-14 flex justify-between items-center;
+    }
 
-.navbar {
-    @apply text-white relative h-14 flex justify-between items-center
-}
+    body {
+        @apply text-whiteColor bg-primaryColor tracking-wider font-nunito;
+    }
 
-body {
-    @apply text-whiteColor bg-primaryColor tracking-wider font-nunito;
-}
+    .ul-list {
+        @apply flex flex-col text-center gap-5 justify-center items-center capitalize text-[1rem];
+        @apply md:flex-row;
+    }
 
-.ul-list {
-    @apply flex flex-col text-center gap-5 justify-center items-center capitalize;
-}
+    .header .nav-link {
+        @apply hover:text-secondaryColor ease-linear duration-200;
+    }
 
-.header .nav-link {
-    @apply hover:text-secondaryColor;
+    .close {
+        @apply absolute top-[0.7rem] right-4 text-4xl cursor-pointer hover:text-secondaryColor ease-linear duration-200;
+    }
+
+    .icons-left {
+        @apply flex gap-5 text-2xl justify-center items-center;
+    }
+
+    .icons-left i {
+        @apply cursor-pointer ease-linear duration-200 hover:text-secondaryColor px-1;
+    }
+
+    .dropdown-menu {
+        @apply absolute top-0 left-0 w-full py-14 bg-primaryColor border-b border-secondaryColor;
+        @apply md:block md:static md:w-auto md:py-0 md:border-none md:ml-auto;
+    }
+
 }
